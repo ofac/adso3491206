@@ -57,6 +57,13 @@ body {
                 }
             }
         }
+        section {
+            h2.subtitle {
+                color: #e44d26;
+                border-bottom: 2px dotted #e44d26;
+                padding-bottom: 0.4rem;
+            }
+        }
     }
     main {
         background: linear-gradient(#0006, #0000);
