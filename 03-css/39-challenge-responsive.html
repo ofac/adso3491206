@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>39-Challenge Responsive</title>
+    <style>
+        * {
+            transition: all 0.4s ease;
+        }
+        body {
+            background: linear-gradient(transparent, #fff353 96%),
+                        #fff353 url(imgs/responsive/bg.webp) no-repeat center top / contain;
+            background-attachment: fixed;
+            font-family: sans-serif;
+
+            main {
+                background: linear-gradient(#000, transparent 96%);
+                border-radius: 12px;
+                corner-shape: squircle;
+                padding: 1rem;
+                min-height: 100dvh;
+
+                img.logo {
+                    width: 480px;
+                    display: block;
+                    margin: 1rem auto;
+                    animation: 8s animLogo infinite ease;
+                }
+
+                section.characters {
+                    margin: 4rem auto;
+                    width: 1440px;
+
+                    figure.character {
+                        outline: 4px solid #000;
+                        border-radius: 12px;
+                        corner-shape: squircle;
+                        display: inline-block;
+                        height: 260px;
+                        overflow: hidden;
+                        padding: 0;
+                        position: relative;
+                        margin: 0 0.5rem;
+                        transition: all 0.4s ease;
+                        width: 340px;
+
+                        
+                        &.character01 {
+                            background: url(imgs/responsive/character01.webp) no-repeat center / 140%;
+                        }
+                        &.character02 {
+                            background: url(imgs/responsive/character02.webp) no-repeat center / 140%;
+                        }
+                        &.character03 {
+                            background: url(imgs/responsive/character03.webp) no-repeat center / 140%;
+                        }
+                        &.character04 {
+                            background: url(imgs/responsive/character04.webp) no-repeat center / 140%;
+                        }
+                        &:hover {
+                            background-size: 180%;
+                            
+                            
+                            figcaption {
+                                color: #fff353;
+                                bottom: 0;
+                            }
+                        }
+
+                        figcaption {
+                            background-color: #000b;
+                            color: #fff;
+                            font-size: 1.4rem;
+                            border-top: 4px solid #000;
+                            position: absolute;
+                            bottom: -3rem;
+                            margin: 0;
+                            backdrop-filter: blur(4px);
+                            padding: 1rem 1rem 4rem 1rem;
+                            transition: all 0.4s 0.2s ease-out;
+                            width: 100%;
+
+                        }
+                    }
+                }
+
+                section.main-characters {
+                    article {
+                        outline: 4px solid #000;
+                        background: #000a;
+                        border-radius: 12px;
+                        color: #fff;
+                        corner-shape: squircle;
+                        padding: 1rem;
+                        margin: 2rem auto;
+                        width: 1388px;
+
+                        img, aside {
+                            display: inline-block;
+                            vertical-align: top;
+                        }
+
+                        img {
+                            filter: drop-shadow(0 0 8px #fff353);
+                            object-fit: contain;
+                            height: 340px;
+                            margin-right: 2rem ;
+                            width: 340px;
+                        }
+
+                        aside {
+                            width: 1000px;
+
+                            h2 {
+                                color: #fff;
+                                font-size: 2rem;
+                                margin-top: 0;
+                            }
+
+                            p {
+                                text-align: justify;
+                                line-height: 2rem;
+                            }
+
+                        }
+
+                        &:hover {
+                             background: #000c;
+                             backdrop-filter: blur(4px);
+
+                             img {
+                                transform: translateX(1.2rem);
+                             }
+
+                             aside {
+                                h2 {
+                                    color: #fff353;
+                                }
+                             }
+                        }
+                    }
+                }
+            }
+        }
+        @keyframes animLogo {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @media (max-width: 1470px) {
+                body {
+                    main {
+                         section.characters {
+                            width: 718px;
+
+                            figure.character {
+                                margin-bottom: 1rem;
+                            }
+                         }
+                         section.main-characters {
+                            article {
+                                width: 670px;
+
+                                img {
+                                    margin-right: 1rem;
+                                    width: 200px;
+
+                                }
+                                aside {
+                                    width: 440px;
+
+                                    p {
+                                        line-height: 1.6rem;
+                                    }
+                                }
+                            }
+                         }
+                    }
+                }
+        }
+        @media (max-width: 746px) {
+                body {
+                    main {
+                        img.logo {
+                            width: 340px;
+                        }
+                         section.characters {
+                            width: 400px;
+
+                            figure.character {
+                                width: 400px;
+                                margin: 0.5rem auto;
+                            }
+                         }
+                         section.main-characters {
+                            article {
+                                width: 370px;
+
+                                img {
+                                    margin-right: 1rem;
+                                    display: block;
+                                    width: 200px;
+                                    margin: 0 auto;
+
+                                }
+                                aside {
+                                    display: block;
+                                    width: 370px;
+                                }
+                            }
+                         }
+                    }
+                }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <img class="logo" src="imgs/responsive/logo.webp" alt="Logo">
+        <section class="characters">
+            <figure class="character character01">
+                <figcaption>Ryoga Hibiki</figcaption>
+            </figure>
+            <figure class="character character02">
+                <figcaption>Tatewaki Kuno</figcaption>
+            </figure>
+            <figure class="character character03">
+                <figcaption>Shampoo</figcaption>
+            </figure>
+            <figure class="character character04">
+                <figcaption>Ukyo Kuonji</figcaption>
+            </figure>
+        </section>
+        <section class="main-characters">
+            <article>
+                <img src="imgs/responsive/akane.webp" alt="Akane">
+                <aside>
+                    <h2>Akane Tendo</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt illo excepturi quam assumenda at aperiam pariatur et. Ullam, facere nesciunt libero corporis alias voluptatibus reiciendis veritatis voluptates delectus amet adipisci officiis porro, aspernatur qui itaque eveniet inventore sapiente iste doloribus officia ipsam excepturi, cupiditate rerum vero! Amet quod harum dolore quis. 
+                        <br><br>
+                        Eius provident maiores nemo corrupti dolores dolorem rerum, corporis minus nobis pariatur natus minima laborum praesentium aut earum, consequatur, illum esse? Rem non dolores eos rerum qui, iste assumenda labore id ratione nihil pariatur provident nesciunt sit, veniam culpa dignissimos accusamus totam ex.
+                    </p>
+                </aside>
+            </article>
+            <article>
+                <img src="imgs/responsive/ranma.webp" alt="Ranma">
+                <aside>
+                    <h2>Ranma Saotome</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt illo excepturi quam assumenda at aperiam pariatur et. Ullam, facere nesciunt libero corporis alias voluptatibus reiciendis veritatis voluptates delectus amet adipisci officiis porro, aspernatur qui itaque eveniet inventore sapiente iste doloribus officia ipsam excepturi, cupiditate rerum vero! Amet quod harum dolore quis. 
+                        <br><br>
+                        Eius provident maiores nemo corrupti dolores dolorem rerum, corporis minus nobis pariatur natus minima laborum praesentium aut earum, consequatur, illum esse? Rem non dolores eos rerum qui, iste assumenda labore id ratione nihil pariatur provident nesciunt sit, veniam culpa dignissimos accusamus totam ex.
+                    </p>
+                </aside>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
